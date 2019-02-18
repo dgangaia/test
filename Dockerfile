@@ -1,7 +1,11 @@
+
 FROM alpine:3.7
 RUN apk add --no-cache mysql-client
 ENTRYPOINT ["mysql"]
 
-echo $SOURCE_COMMIT
+RUN echo $SOURCE_COMMIT
 
-LABEL =$SOURCE_COMMIT
+LABEL Version=SOURCE_COMMIT
+
+run export GIT_REVISION_SHA="$(git rev-parse --short HEAD)" 
+RUN echo $GIT_REVISION_SHA
