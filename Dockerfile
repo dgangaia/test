@@ -1,7 +1,4 @@
-FROM alpine as test
+FROM registry.access.redhat.com/rhel7/rhel
 # Install dependencies required to git clone.
-RUN apk update && \
-    apk install git && \
-    apk install openssh
-RUN git@github.com:dgangaia/test.git
-
+RUN yum install git 
+RUN git@github.com:dgangaia/test.git 
