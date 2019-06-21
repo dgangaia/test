@@ -10,6 +10,7 @@ pool:
   vmImage: 'ubuntu-16.04'
 
 steps:
-- script: 
+- script: |
     docker build -t quay.io/dgangaia/donald .
+    docker version
 
