@@ -7,11 +7,16 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'nginx'
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+steps:
+- script: 
+    docker build -t $(dockerId)/$(imageName) .
+    docker login -u $(dockerId) -p $(pswd) quay.io
+    docker push $(dockerId)/donald
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
