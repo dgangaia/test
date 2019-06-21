@@ -17,5 +17,6 @@ steps:
     docker inspect quay.io/dgangaia/donald:latest
     docker push quay.io/dgangaia/donald:latest
     docker pull quay.io/dgangaia/busybox
+    journalctl -u docker.service
     
 
