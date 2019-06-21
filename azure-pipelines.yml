@@ -11,5 +11,5 @@ pool:
 
 steps:
 - script: 
-    docker build -t $(dockerId)/$(imageName) .
+    docker build -t quay.io/dgangaia/donald .
 
