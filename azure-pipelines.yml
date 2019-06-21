@@ -11,6 +11,9 @@ pool:
 
 steps:
 - script: |
-    docker build -t quay.io/dgangaia/donald .
-    docker version
+    docker build -t quay.io/dgangaia/donald:latest .
+    docker --version
+    docker login -u="dgangaia" -p="jP3ZZ88WJekQOsjE+Hi6gsylJ4J8NVpUVRi4FMAfrQ3O/L0Dgs1Bv9Fl8o1GC/Jo" quay.io
+    docker push quay.io/dgangaia/donald:latest
+    
 
