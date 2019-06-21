@@ -17,6 +17,6 @@ steps:
     docker inspect quay.io/dgangaia/nginxtest:latest
     docker push quay.io/dgangaia/nginxtest:latest
     docker pull quay.io/dgangaia/busybox
-    cat /var/log/messages
+    sudo journalctl -fu docker.service
     
 
