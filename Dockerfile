@@ -1,6 +1,6 @@
 #Multistage build
 FROM quay.io/testquay1/ubuntu AS base
-RUN …
+RUN echo "stage1"
 
-FROM quay.io/testquay1/busybox AS version1
-RUN touch test
+FROM quay.io/testquay1/ubi8-python36 
+RUN echo "stage2"
