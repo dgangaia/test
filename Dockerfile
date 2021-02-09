@@ -1,6 +1,2 @@
-#Multistage build
-FROM quay.io/testquay1/simulator AS base
-RUN echo "stage1"
-
-FROM quay.io/testquay1/ubuntu 
-RUN echo "stage2"
+FROM quay.io/testquay1/nginx@sha256:95facc943914a4d0f8df55457b3a0ac68cfc2bd0988d946fc15ceef7f0cffb85
+FROM quay.io/testquay1/ose-pod@sha256:af62f107b1a398f69716aaf1bd2757d1380a4deb6fd9beee197468325e729934
